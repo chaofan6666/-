@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>景国祥♥刘美英</title>
+    <style>
+        div{
+            width:600px;
+            height:50px;
+            background:tomato;
+            margin:60px auto;
+            border-radius:50px;
+            font-size:20px;
+            color:white;
+            text-align:center;
+            line-height:50px;
+            font-family:楷体;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div></div> --><!-- 喜欢的时间 -->
+    <div></div><!-- 在一起的时间 -->
+    <div></div><!--刘美英的生日倒计时-->
+    <div></div><!--自己的生日倒计时-->
+    <!-- <div></div>--><!--异地分开--> 
+    <div></div><!--本地时间-->
+
+
+    <script>
+        //喜欢的时间
+        // setInterval(function(){
+        //     var now=new Date();
+        //     var future=new Date('2020/02/12 00:00:00');
+        //     var cha=now-future
+        //     var t=parseInt(Math.abs(cha/1000/60/60/24));t=t<10?'0'+t:t;
+        //     var s=parseInt(Math.abs(cha/1000/60/60%24));s=s<10?'0'+s:s;
+        //     var f=parseInt(Math.abs(cha/1000/60%60));f=f<10?'0'+f:f;
+        //     var m=parseInt(Math.abs(cha/1000%60));m=m<10?'0'+m:m;
+        //     var div=document.getElementsByTagName('div')[0];
+        //     div.innerHTML='♡&nbsp;&nbsp;喜欢小英已经&nbsp;'+t+'天'+s+'小时'+f+'分钟'+m+'秒&nbsp;&nbsp;♡';
+        // },1)
+        //在一起时间
+        setInterval(function(){
+            var now=new Date();
+            var future=new Date('2022/01/09 22:28:30');
+            var cha=now-future
+            var t=parseInt(Math.abs(cha/1000/60/60/24));t=t<10?'0'+t:t;
+            var s=parseInt(Math.abs(cha/1000/60/60%24));s=s<10?'0'+s:s;
+            var f=parseInt(Math.abs(cha/1000/60%60));f=f<10?'0'+f:f;
+            var m=parseInt(Math.abs(cha/1000%60));m=m<10?'0'+m:m;
+            var div=document.getElementsByTagName('div')[0];
+            div.innerHTML='♡&nbsp;&nbsp;和小英在一起已经&nbsp;'+t+'天'+s+'小时'+f+'分钟'+m+'秒&nbsp;&nbsp;♡';
+        },1)
+        //小英的生日倒计时
+        setInterval(function(){
+            var now=new Date();
+            var future=new Date('2022/11/17 00:00:00');
+            var cha=future-now
+            var t=parseInt(Math.abs(cha/1000/60/60/24));t=t<10?'0'+t:t;
+            var s=parseInt(Math.abs(cha/1000/60/60%24));s=s<10?'0'+s:s;
+            var f=parseInt(Math.abs(cha/1000/60%60));f=f<10?'0'+f:f;
+            var m=parseInt(Math.abs(cha/1000%60));m=m<10?'0'+m:m;
+            var div=document.getElementsByTagName('div')[1];
+            div.innerHTML='♡&nbsp;&nbsp;距离刘美英的生日还有&nbsp;'+t+'天'+s+'小时'+f+'分钟'+m+'秒&nbsp;&nbsp;♡';
+        },1)
+        //景国祥的生日倒计时
+        setInterval(function(){
+            var now=new Date();
+            var future=new Date('2022/12/06 00:00:00');
+            var cha=future-now
+            var t=parseInt(Math.abs(cha/1000/60/60/24));t=t<10?'0'+t:t;
+            var s=parseInt(Math.abs(cha/1000/60/60%24));s=s<10?'0'+s:s;
+            var f=parseInt(Math.abs(cha/1000/60%60));f=f<10?'0'+f:f;
+            var m=parseInt(Math.abs(cha/1000%60));m=m<10?'0'+m:m;
+            var div=document.getElementsByTagName('div')[2];
+            div.innerHTML='♡&nbsp;&nbsp;距离景国祥的生日还有&nbsp;'+t+'天'+s+'小时'+f+'分钟'+m+'秒&nbsp;&nbsp;♡';
+        },1)
+		//和小英异地的时间
+		// setInterval(function(){
+		//     var now=new Date();
+		//     var future=new Date('2020/05/22 14:19:00');
+		//     var cha=now-future
+		//     var t=parseInt(Math.abs(cha/1000/60/60/24));t=t<10?'0'+t:t;
+		//     var s=parseInt(Math.abs(cha/1000/60/60%24));s=s<10?'0'+s:s;
+		//     var f=parseInt(Math.abs(cha/1000/60%60));f=f<10?'0'+f:f;
+		//     var m=parseInt(Math.abs(cha/1000%60));m=m<10?'0'+m:m;
+		//     var div=document.getElementsByTagName('div')[4];
+		//     div.innerHTML='♡&nbsp;&nbsp;和小欣异地分开已经&nbsp;'+t+'天'+s+'小时'+f+'分钟'+m+'秒&nbsp;&nbsp;♡';
+		// },1)
+        //现在的时间
+        setInterval(function(){
+            var div=document.getElementsByTagName('div')[3];
+            var now=new Date();
+            var nian=now.getFullYear();
+            var yue=now.getMonth()+1;yue=yue<10?'0'+yue:yue;
+            var ri=now.getDate();ri=ri<10?'0'+ri:ri;
+            var shi=now.getHours();shi=shi<10?'0'+shi:shi;
+            var fen=now.getMinutes();fen=fen<10?'0'+fen:fen;
+            var miao=now.getSeconds();miao=miao<10?'0'+miao:miao;
+            var day=now.getDay();
+            var arr=['星期日','星期一','星期二','星期三','星期四','星期五','星期六']
+            div.innerHTML=nian+'年'+yue+'月'+ri+'日'+'&nbsp;&nbsp;'+shi+':'+fen+':'+miao+'&nbsp;&nbsp;'+arr[day]
+        },1)
+    </script>
+</body>
+</html>
